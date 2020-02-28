@@ -1,24 +1,6 @@
-# Android MVVM Architecture: Sample App
-[![Mindorks](https://img.shields.io/badge/mindorks-opensource-blue.svg)](https://mindorks.com/open-source-projects)
-[![Mindorks Community](https://img.shields.io/badge/join-community-blue.svg)](https://mindorks.com/join-community)
+# Android MVVM Architecture Template
 
-This repository contains a detailed sample app that implements MVVM architecture using Dagger2, Room, RxJava, FastAndroidNetworking, PlaceHolderView and AndroidDebugDatabase
-<p align="center">
-  <img src="https://janishar.github.io/images/mvp-app-pics/mvp-login.png" width="250">
-  <img src="https://janishar.github.io/images/mvp-app-pics/main-view.png" width="250">
-  <img src="https://janishar.github.io/gifs/mvp-app.gif" width="250">
-</p>
-<br>
-<p align="center">
-  <img src="https://janishar.github.io/images/mvp-app-pics/mvp-drawer.png" width="200">
-  <img src="https://janishar.github.io/images/mvp-app-pics/mvp-rating.png" width="200">
-  <img src="https://janishar.github.io/images/mvp-app-pics/mvp-feed.png" width="200">
-  <img src="https://janishar.github.io/images/mvp-app-pics/mvp-empty-state.png" width="200">
-</p>
-<br>
-<br>
-
-#### The app has following packages:
+#### The template has following packages:
 1. **data**: It contains all the data accessing and manipulating components.
 2. **di**: Dependency providing classes using Dagger2.
 3. **ui**: View classes along with their corresponding ViewModel.
@@ -45,28 +27,5 @@ This repository contains a detailed sample app that implements MVVM architecture
 7. [Android Tinder Swipe View Example](https://blog.mindorks.com/android-tinder-swipe-view-example-3eca9b0d4794#.u7i7jbbvy)
 8. [Debugging Android Databases And Shared Preferences In The Easiest Way](https://blog.mindorks.com/debugging-android-databases-and-shared-preferences-in-the-easiest-way-e5f705dfc06b#.pxw0hvnws)
 
-### Looking for Kotlin MVP Architecture - [Check here](https://github.com/MindorksOpenSource/android-kotlin-mvp-architecture)
-
-### Looking for MVP Architecture - [Check here](https://github.com/MindorksOpenSource/android-mvp-architecture)
-
-[Check out Mindorks awesome open source projects here](https://mindorks.com/open-source-projects)
-
-### License
-```
-   Copyright (C) 2017 MINDORKS NEXTGEN PRIVATE LIMITED
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-```
-
 ### Contributing to Android MVVM Architecture
-Just make pull request. You are in!
+Just clone. You are in!
