@@ -25,9 +25,6 @@ import com.enyata.framework.mvvm.data.DataManager;
 
 import javax.inject.Inject;
 
-/**
- * Created by amitshekhar on 07/07/17.
- */
 
 public class AppPreferencesHelper implements PreferencesHelper {
 

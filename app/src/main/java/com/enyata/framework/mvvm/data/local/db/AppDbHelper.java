@@ -18,9 +18,6 @@ package com.enyata.framework.mvvm.data.local.db;
 
 import javax.inject.Singleton;
 
-/**
- * Created by amitshekhar on 07/07/17.
- */
 
 @Singleton
 public class AppDbHelper {

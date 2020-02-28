@@ -19,9 +19,6 @@ package com.enyata.framework.mvvm.ui.base;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
-/**
- * Created by amitshekhar on 11/07/17.
- */
 
 public abstract class BaseViewHolder extends RecyclerView.ViewHolder {
 

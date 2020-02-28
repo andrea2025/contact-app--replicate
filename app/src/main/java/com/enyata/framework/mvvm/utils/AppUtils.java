@@ -16,9 +16,6 @@
 
 package com.enyata.framework.mvvm.utils;
 
-/**
- * Created by amitshekhar on 07/07/17.
- */
 
 public final class AppUtils {
 

@@ -18,9 +18,6 @@ package com.enyata.framework.mvvm.data.local.prefs;
 
 import com.enyata.framework.mvvm.data.DataManager;
 
-/**
- * Created by amitshekhar on 07/07/17.
- */
 
 public interface PreferencesHelper {
 

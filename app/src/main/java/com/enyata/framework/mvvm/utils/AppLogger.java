@@ -19,9 +19,6 @@ package com.enyata.framework.mvvm.utils;
 import timber.log.BuildConfig;
 import timber.log.Timber;
 
-/**
- * Created by amitshekhar on 07/07/17.
- */
 
 public final class AppLogger {
 

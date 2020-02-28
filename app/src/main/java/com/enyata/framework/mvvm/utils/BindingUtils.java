@@ -23,9 +23,6 @@ import androidx.databinding.BindingAdapter;
 
 import com.bumptech.glide.Glide;
 
-/**
- * Created by amitshekhar on 11/07/17.
- */
 
 public final class BindingUtils {
 

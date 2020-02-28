@@ -20,9 +20,6 @@ import com.enyata.framework.mvvm.data.model.db.Option;
 import com.enyata.framework.mvvm.data.model.db.Question;
 import java.util.List;
 
-/**
- * Created by amitshekhar on 09/07/17.
- */
 
 public class QuestionCardData {
 

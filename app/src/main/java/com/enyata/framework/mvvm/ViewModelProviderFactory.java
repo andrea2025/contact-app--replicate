@@ -11,9 +11,7 @@ import com.enyata.framework.mvvm.utils.rx.SchedulerProvider;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-/**
- * Created by jyotidubey on 22/02/19.
- */
+
 @Singleton
 public class ViewModelProviderFactory extends ViewModelProvider.NewInstanceFactory {
 
