@@ -25,7 +25,6 @@ import com.enyata.framework.mvvm.BuildConfig;
 import com.enyata.framework.mvvm.R;
 import com.enyata.framework.mvvm.data.AppDataManager;
 import com.enyata.framework.mvvm.data.DataManager;
-import com.enyata.framework.mvvm.data.local.db.AppDatabase;
 import com.enyata.framework.mvvm.data.local.prefs.AppPreferencesHelper;
 import com.enyata.framework.mvvm.data.local.prefs.PreferencesHelper;
 import com.enyata.framework.mvvm.data.remote.ApiHeader;
@@ -62,12 +61,6 @@ public class AppModule {
         return BuildConfig.API_KEY;
     }
 
-    @Provides
-    @Singleton
-    AppDatabase provideAppDatabase(@DatabaseInfo String dbName, Context context) {
-        return Room.databaseBuilder(context, AppDatabase.class, dbName).fallbackToDestructiveMigration()
-                .build();
-    }
 
     @Provides
     @Singleton

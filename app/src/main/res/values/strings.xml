@@ -1,7 +1,5 @@
-
-
 <resources>
-    <string name="app_name">MvvmApp</string>
+    <string name="app_name"></string>
 
     <!--Toolbar menus-->
     <string name="clear">Clear</string>
@@ -18,7 +16,7 @@
     <!--Drawer Menus-->
     <string name="about">About</string>
     <string name="logout">Logout</string>
-    <string name="feed">My Feed</string>
+
 
     <!--App Message-->
     <string name="api_retry_error">Please retry!</string>
@@ -36,9 +34,12 @@
     <string name="invalid_email_password">Please provide a valid email and password.</string>
 
 
+    <string name="fragment1">Giveaways made\n easy</string>
+    <string name="FragmentSubText">Easy App for Social Media\n Giveaways</string>
+    <string name="fragment2">Complete tasks and\n win gifts</string>
+    <string name="FragmentSubText2"> Generate leads, capture lead information\n and reward loyal followers</string>
 
-
-
-
+    <string name="fragment3">  Get rewards with\n ease</string>
+    <string name="FragmentSubText3">Generate leads, capture lead information\n and reward loyal followers</string>
 
 </resources>

@@ -43,16 +43,7 @@
             android:name="com.enyata.framework.mvvm.ui.mainActivity.MainActivity"
             android:launchMode="singleTop" />
 
-        <activity
-            android:name="com.mindorks.framework.mvvm.ui.feed.FeedActivity"
-            android:launchMode="singleTop"
-            android:parentActivityName=".ui.main.MainActivity">
 
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.main.MainActivity" />
-        </activity>
     </application>
 
 </manifest>

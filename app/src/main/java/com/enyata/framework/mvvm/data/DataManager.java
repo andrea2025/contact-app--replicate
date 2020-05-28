@@ -17,21 +17,13 @@
 package com.enyata.framework.mvvm.data;
 
 import com.enyata.framework.mvvm.data.local.prefs.PreferencesHelper;
-import com.enyata.framework.mvvm.data.model.others.QuestionCardData;
 import com.enyata.framework.mvvm.data.remote.ApiHelper;
-
-import io.reactivex.Observable;
-import java.util.List;
 
 
 
 public interface DataManager extends PreferencesHelper, ApiHelper {
 
-    Observable<List<QuestionCardData>> getQuestionCardData();
 
-    Observable<Boolean> seedDatabaseOptions();
-
-    Observable<Boolean> seedDatabaseQuestions();
 
     void setUserAsLoggedOut();
 
@@ -47,10 +39,7 @@ public interface DataManager extends PreferencesHelper, ApiHelper {
 
     enum LoggedInMode {
 
-        LOGGED_IN_MODE_LOGGED_OUT(0),
-        LOGGED_IN_MODE_GOOGLE(1),
-        LOGGED_IN_MODE_FB(2),
-        LOGGED_IN_MODE_SERVER(3);
+        LOGGED_IN_MODE_LOGGED_OUT(0);
 
         private final int mType;
 

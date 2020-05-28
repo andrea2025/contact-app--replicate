@@ -19,20 +19,10 @@ package com.enyata.framework.mvvm.data;
 import android.content.Context;
 
 import com.enyata.framework.mvvm.data.local.prefs.PreferencesHelper;
-import com.enyata.framework.mvvm.data.model.others.QuestionCardData;
 import com.enyata.framework.mvvm.data.remote.ApiHeader;
 import com.enyata.framework.mvvm.data.remote.ApiHelper;
 import com.google.gson.Gson;
-import com.enyata.framework.mvvm.data.model.api.response.BlogResponse;
-import com.enyata.framework.mvvm.data.model.api.response.LoginRequest;
-import com.enyata.framework.mvvm.data.model.api.LoginResponse;
-import com.enyata.framework.mvvm.data.model.api.response.LogoutResponse;
-import com.enyata.framework.mvvm.data.model.api.response.OpenSourceResponse;
 
-import io.reactivex.Observable;
-import io.reactivex.Single;
-
-import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 @Singleton
@@ -59,25 +49,6 @@ public class AppDataManager implements DataManager {
         mGson = gson;
     }
 
-    @Override
-    public Single<LoginResponse> doFacebookLoginApiCall(LoginRequest.FacebookLoginRequest request) {
-        return mApiHelper.doFacebookLoginApiCall(request);
-    }
-
-    @Override
-    public Single<LoginResponse> doGoogleLoginApiCall(LoginRequest.GoogleLoginRequest request) {
-        return mApiHelper.doGoogleLoginApiCall(request);
-    }
-
-    @Override
-    public Single<LogoutResponse> doLogoutApiCall() {
-        return mApiHelper.doLogoutApiCall();
-    }
-
-    @Override
-    public Single<LoginResponse> doServerLoginApiCall(LoginRequest.ServerLoginRequest request) {
-        return mApiHelper.doServerLoginApiCall(request);
-    }
 
     @Override
     public String getAccessToken() {
@@ -94,11 +65,6 @@ public class AppDataManager implements DataManager {
     @Override
     public ApiHeader getApiHeader() {
         return mApiHelper.getApiHeader();
-    }
-
-    @Override
-    public Single<BlogResponse> getBlogApiCall() {
-        return mApiHelper.getBlogApiCall();
     }
 
     @Override
@@ -151,26 +117,6 @@ public class AppDataManager implements DataManager {
         mPreferencesHelper.setCurrentUserProfilePicUrl(profilePicUrl);
     }
 
-    @Override
-    public Single<OpenSourceResponse> getOpenSourceApiCall() {
-        return mApiHelper.getOpenSourceApiCall();
-    }
-
-
-    @Override
-    public Observable<List<QuestionCardData>> getQuestionCardData() {
-        return null;
-    }
-
-    @Override
-    public Observable<Boolean> seedDatabaseOptions() {
-        return null;
-    }
-
-    @Override
-    public Observable<Boolean> seedDatabaseQuestions() {
-        return null;
-    }
 
     @Override
     public void setUserAsLoggedOut() {

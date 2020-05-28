@@ -16,31 +16,13 @@
 
 package com.enyata.framework.mvvm.data.remote;
 
-import com.enyata.framework.mvvm.data.model.api.response.BlogResponse;
-import com.enyata.framework.mvvm.data.model.api.response.LoginRequest;
-import com.enyata.framework.mvvm.data.model.api.LoginResponse;
-import com.enyata.framework.mvvm.data.model.api.response.LogoutResponse;
-import com.enyata.framework.mvvm.data.model.api.response.OpenSourceResponse;
-import io.reactivex.Single;
 
-/**
- * Created by amitshekhar on 07/07/17.
- */
 
 public interface ApiHelper {
 
-    Single<LoginResponse> doFacebookLoginApiCall(LoginRequest.FacebookLoginRequest request);
-
-    Single<LoginResponse> doGoogleLoginApiCall(LoginRequest.GoogleLoginRequest request);
-
-    Single<LogoutResponse> doLogoutApiCall();
-
-    Single<LoginResponse> doServerLoginApiCall(LoginRequest.ServerLoginRequest request);
 
     ApiHeader getApiHeader();
 
-    Single<BlogResponse> getBlogApiCall();
 
-    Single<OpenSourceResponse> getOpenSourceApiCall();
 
 }
