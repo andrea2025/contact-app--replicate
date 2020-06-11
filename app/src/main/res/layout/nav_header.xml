@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginTop="50dp"
+    tools:context=".ui.mainActivity.MainActivity"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+<ImageView
+    android:id="@+id/contactImage"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@drawable/google_contacts_logo"/>
+
+<TextView
+    android:id="@+id/textContact"
+    android:layout_marginTop="4dp"
+    android:layout_toRightOf="@id/contactImage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/gray"
+    android:text="Contacts"
+    android:textSize="30sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/contactImage"
+        android:layout_marginBottom="-20dp"
+        android:background="@color/gray" />
+
+
+</RelativeLayout>

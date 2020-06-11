@@ -30,6 +30,13 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
 
+    <string-array name="array_name">
+        <item>anita@gmail.com</item>
+        <item>tomiwa@gmail.com</item>
+        <item>andrea@gmail.com</item>
+
+    </string-array>
+
     <!--Login Validation-->
     <string name="invalid_email_password">Please provide a valid email and password.</string>
 
@@ -41,5 +48,6 @@
 
     <string name="fragment3">  Get rewards with\n ease</string>
     <string name="FragmentSubText3">Generate leads, capture lead information\n and reward loyal followers</string>
+    <string name="title_activity_main2">Main2Activity</string>
 
 </resources>

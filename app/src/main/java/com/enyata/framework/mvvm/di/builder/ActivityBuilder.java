@@ -16,6 +16,7 @@
 
 package com.enyata.framework.mvvm.di.builder;
 
+import com.enyata.framework.mvvm.ui.add_contact.AddContactActivity;
 import com.enyata.framework.mvvm.ui.mainActivity.MainActivity;
 import com.enyata.framework.mvvm.ui.splash.SplashActivity;
 
@@ -30,4 +31,7 @@ public abstract class ActivityBuilder {
 
     @ContributesAndroidInjector
     abstract SplashActivity bindSplashActivity();
+
+    @ContributesAndroidInjector
+    abstract AddContactActivity bindAddContactActivity();
 }

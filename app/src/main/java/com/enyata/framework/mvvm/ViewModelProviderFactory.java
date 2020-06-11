@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.enyata.framework.mvvm.data.DataManager;
+import com.enyata.framework.mvvm.ui.add_contact.AddContactViewModel;
 import com.enyata.framework.mvvm.ui.mainActivity.MainActivityViewModel;
 import com.enyata.framework.mvvm.ui.splash.SplashViewModel;
 import com.enyata.framework.mvvm.utils.rx.SchedulerProvider;
@@ -35,6 +36,9 @@ public class ViewModelProviderFactory extends ViewModelProvider.NewInstanceFacto
     else if (modelClass.isAssignableFrom(SplashViewModel.class)) {
       //noinspection unchecked
       return (T) new SplashViewModel(dataManager,schedulerProvider);
+    }else if (modelClass.isAssignableFrom(AddContactViewModel.class)) {
+      //noinspection unchecked
+      return (T) new AddContactViewModel(dataManager,schedulerProvider);
     }
     throw new IllegalArgumentException("Unknown ViewModel class: " + modelClass.getName());
   }

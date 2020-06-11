@@ -61,6 +61,10 @@ dependencies {
     implementation "androidx.vectordrawable:vectordrawable:$rootProject.vectorDrawableVersion"
     implementation "androidx.vectordrawable:vectordrawable-animated:$rootProject.animatedVectorDrawableVersion"
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+    implementation 'com.android.support:design:28.0.0-alpha1'
+    implementation 'com.mikhaellopez:circularimageview:4.2.0'
+    implementation "com.github.kapilmhr:TextDrawable:1.0.0"
+    implementation 'com.android.support:design:23.1.1'
 
     // network
     implementation "com.amitshekhar.android:rx2-android-networking:$rootProject.rx2FastAndroidNetworking"
@@ -68,13 +72,18 @@ dependencies {
     // database
     implementation "androidx.room:room-rxjava2:$rootProject.roomDatabaseVersion"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
     annotationProcessor "androidx.room:room-compiler:$rootProject.roomDatabaseVersion"
+
 
     // font
     implementation "uk.co.chrisjenx:calligraphy:$rootProject.calligraphyVersion"
 
     // image
     implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     // parser
     implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
