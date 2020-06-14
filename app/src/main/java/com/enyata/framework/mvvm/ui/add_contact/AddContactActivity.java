@@ -2,7 +2,6 @@ package com.enyata.framework.mvvm.ui.add_contact;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -67,25 +66,21 @@ ImageView mCameraClick, mCancelAddContact;
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("Change photo");
 
-        builder.setItems(options, new DialogInterface.OnClickListener() {
+        builder.setItems(options, (dialog, item) -> {
 
-            @Override
-            public void onClick(DialogInterface dialog, int item) {
+            if (options[item].equals("Take photo")) {
+                Intent takePicture = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(takePicture, 0);
 
-                if (options[item].equals("Take photo")) {
-                    Intent takePicture = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivityForResult(takePicture, 0);
+            } else if (options[item].equals("Choose photo")) {
+                Intent pickPhoto = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                pickPhoto.setType("image/*");
+                String[] mimeTypes = {"image/jpeg", "image/png"};
+                pickPhoto.putExtra(Intent.EXTRA_MIME_TYPES,mimeTypes);
+                startActivityForResult(pickPhoto, 1);
 
-                } else if (options[item].equals("Choose photo")) {
-                    Intent pickPhoto = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                    pickPhoto.setType("image/*");
-                    String[] mimeTypes = {"image/jpeg", "image/png"};
-                    pickPhoto.putExtra(Intent.EXTRA_MIME_TYPES,mimeTypes);
-                    startActivityForResult(pickPhoto, 1);
-
-                } else if (options[item].equals("Cancel")) {
-                    dialog.dismiss();
-                }
+            } else if (options[item].equals("Cancel")) {
+                dialog.dismiss();
             }
         });
         builder.show();

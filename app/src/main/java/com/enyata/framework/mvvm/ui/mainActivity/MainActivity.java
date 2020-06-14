@@ -26,6 +26,7 @@ import com.enyata.framework.mvvm.ui.base.BaseActivity;
 import com.enyata.framework.mvvm.ui.mainActivity.adapter.ContactAdapter;
 import com.enyata.framework.mvvm.ui.mainActivity.common.Common;
 import com.enyata.framework.mvvm.ui.mainActivity.common.LinearLayoutMangerScroller;
+import com.enyata.framework.mvvm.ui.setting.SettingActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -153,8 +154,12 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainActivity
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
 
+        }else if (id == R.id.nav_settings) {
+            Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
+            startActivity(intent);
         }
-        return true;
+
+            return true;
     }
 
     @Override

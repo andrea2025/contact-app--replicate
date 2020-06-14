@@ -1,0 +1,33 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="sort_values">
+        <item>First name</item>
+        <item>Surname</item>
+    </string-array>
+
+    <string-array name="format_values">
+        <item>First name first</item>
+        <item>Surname first</item>
+    </string-array>
+
+
+
+    <string-array name="import_values">
+        <item>.vcf file</item>
+        <item>SIM 1</item>
+        <item>SIM 2</item>
+    </string-array>
+
+
+    <string-array name="export_values">
+        <item>anitaogechi@gmail.com</item>
+        <item>AndrerMena@tmail.com</item>
+    </string-array>
+
+
+</resources>

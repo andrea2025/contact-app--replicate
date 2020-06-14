@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -69,6 +70,10 @@ public class ContactAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                     .charAt(0)),mColor.getRandomColor());
 
         personViewHolder.mImageView.setImageDrawable(drawable);
+        
+        personViewHolder.itemView.setOnClickListener(view -> {
+            Toast.makeText(context, ""+ mContactLists.get(position).getContactName(), Toast.LENGTH_SHORT).show();
+        });
         }
     }
 

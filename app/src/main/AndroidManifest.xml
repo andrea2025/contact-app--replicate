@@ -30,7 +30,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.mainActivity.AlphabetActivity"></activity>
+        <activity android:name=".ui.view_contact.ViewContactActivity"></activity>
+        <activity android:name=".ui.setting.info.UserInfoActivity" />
+        <activity android:name=".ui.setting.SettingActivity" />
+        <activity android:name=".ui.mainActivity.AlphabetActivity" />
         <activity android:name=".ui.add_contact.AddContactActivity" />
         <activity android:name=".ui.splash.SplashActivity">
             <intent-filter>
