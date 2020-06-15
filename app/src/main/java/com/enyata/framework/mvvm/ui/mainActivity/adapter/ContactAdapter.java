@@ -1,12 +1,13 @@
 package com.enyata.framework.mvvm.ui.mainActivity.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.enyata.framework.mvvm.R;
 import com.enyata.framework.mvvm.ui.mainActivity.ContactList;
 import com.enyata.framework.mvvm.ui.mainActivity.common.Common;
+import com.enyata.framework.mvvm.ui.view_contact.ViewContactActivity;
 
 import java.util.List;
 
@@ -24,6 +26,7 @@ public class ContactAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     Context context;
     List<ContactList> mContactLists;
+
 
     public ContactAdapter(Context context, List<ContactList> contactLists) {
         this.context = context;
@@ -66,15 +69,28 @@ public class ContactAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             personViewHolder.fullName.setText(mContactLists.get(position).getContactName());
 
             ColorGenerator mColor = ColorGenerator.MATERIAL;
-            TextDrawable drawable = TextDrawable.builder().buildRound(String.valueOf(mContactLists.get(position).getContactName()
-                    .charAt(0)),mColor.getRandomColor());
 
-        personViewHolder.mImageView.setImageDrawable(drawable);
-        
-        personViewHolder.itemView.setOnClickListener(view -> {
-            Toast.makeText(context, ""+ mContactLists.get(position).getContactName(), Toast.LENGTH_SHORT).show();
+
+            final String contactName = mContactLists.get(position).getContactName();
+            TextDrawable drawable = TextDrawable.builder().buildRound(String.valueOf(contactName.charAt(0)),mColor.getRandomColor());
+            personViewHolder.mImageView.setImageDrawable(drawable);
+
+
+        personViewHolder.mRelativeLayout.setOnClickListener(view -> {
+            //Toast.makeText(context, ""+ mContactLists.get(position).getContactName(), Toast.LENGTH_SHORT).show();
+
+
+
+
+            Intent intent = new Intent(view.getContext(), ViewContactActivity.class);
+            intent.putExtra("text",contactName);
+
+
+            context.startActivity(intent);
+
         });
         }
+
     }
 
     @Override
@@ -95,17 +111,20 @@ public class ContactAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         }
     }
 
-    private class PersonViewHolder extends RecyclerView.ViewHolder{
+    private class PersonViewHolder extends RecyclerView.ViewHolder {
 
         TextView fullName;
         ImageView mImageView;
+        RelativeLayout mRelativeLayout;
         public PersonViewHolder(@NonNull View itemView) {
             super(itemView);
 
-
             fullName = itemView.findViewById(R.id.contactText);
             mImageView = itemView.findViewById(R.id.imageContact);
+            mRelativeLayout = itemView.findViewById(R.id.parentLayout);
         }
+
+
     }
 
 

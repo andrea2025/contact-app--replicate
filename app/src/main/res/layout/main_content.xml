@@ -33,9 +33,9 @@
                 <ImageView
                     android:id="@+id/home"
                     android:layout_width="20dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="10dp"
                     android:tint="@color/black"
                     app:srcCompat="@drawable/ic_menubar" />
 
@@ -57,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="12dp"
                     android:layout_marginRight="60dp"
 
                     app:srcCompat="@drawable/ic_more_vert_black" />
@@ -65,8 +65,8 @@
 
                 <ImageView
                     android:id="@+id/Image"
-                    android:layout_width="35dp"
-                    android:layout_height="32dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="10dp"

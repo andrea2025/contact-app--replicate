@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -20,12 +22,12 @@ import com.enyata.framework.mvvm.ui.mainActivity.MainActivity;
 
 import javax.inject.Inject;
 
-public class AddContactActivity extends BaseActivity<ActivityAddContactBinding,AddContactViewModel> implements AddContactNavigator {
+public class AddContactActivity extends BaseActivity<ActivityAddContactBinding,AddContactViewModel> implements AddContactNavigator, PopupMenu.OnMenuItemClickListener {
 @Inject
     ViewModelProviderFactory factory;
 AddContactViewModel mAddContactViewModel;
 ActivityAddContactBinding mActivityAddContactBinding;
-ImageView mCameraClick, mCancelAddContact;
+ImageView mCameraClick, mCancelAddContact,mVert;
     @Override
     public int getBindingVariable() {
         return com.enyata.framework.mvvm.BR.viewModel;
@@ -57,8 +59,19 @@ ImageView mCameraClick, mCancelAddContact;
            startActivity(intent);
        });
 
+       mVert= findViewById(R.id.vert);
+       mVert.setOnClickListener(view -> {
+           PopupMenu popupMenu = new PopupMenu(this,view);
+           popupMenu.setOnMenuItemClickListener(AddContactActivity.this);
+           popupMenu.inflate(R.menu.main);
+           popupMenu.show();
+
+       });
+
 
     }
+
+
 
     private  void  selectImage(Context context){
         final CharSequence[] options = {"Take photo", "Choose photo","Cancel"};
@@ -106,6 +119,11 @@ ImageView mCameraClick, mCancelAddContact;
             }
 
         }
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem menuItem) {
+        return false;
     }
 }
 
