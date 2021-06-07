@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parentLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="36dp"-->
+<!--        android:paddingLeft="16dp"-->
+<!--        android:background="#f7f7f7"-->
+<!--        android:paddingTop="10dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="20sp"-->
+<!--        android:id="@+id/mSection"/>-->
+
+
+<RelativeLayout
+
     android:orientation="vertical"
 android:layout_marginTop="10dp"
     android:layout_width="match_parent"
@@ -26,7 +43,9 @@ android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/imageContact"
         android:layout_marginTop="15dp"
         android:textSize="18sp"
+        android:clickable="true"
        android:textColor="@color/black"
         android:text="Voice mail"/>
 
 </RelativeLayout>
+</LinearLayout>

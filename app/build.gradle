@@ -65,6 +65,7 @@ dependencies {
     implementation 'com.mikhaellopez:circularimageview:4.2.0'
     implementation "com.github.kapilmhr:TextDrawable:1.0.0"
     implementation 'com.android.support:design:23.1.1'
+    implementation 'com.github.IntruderShanky:Sectioned-RecyclerView:2.1.1'
 
     // network
     implementation "com.amitshekhar.android:rx2-android-networking:$rootProject.rx2FastAndroidNetworking"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">Contact App</string>
 
     <!--Toolbar menus-->
     <string name="clear">Clear</string>

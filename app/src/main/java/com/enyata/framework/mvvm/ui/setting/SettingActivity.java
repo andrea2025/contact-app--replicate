@@ -22,16 +22,10 @@ TextView mSort,mFormat,mDefault,mExport,mImport,mUndo,mBlock,mRestore;
             String[] sortName = getApplicationContext().getResources().getStringArray(R.array.sort_values);
 
             builder.setTitle("Sort by");
-            builder.setSingleChoiceItems(sortName, -1, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
+            builder.setSingleChoiceItems(sortName, -1, (dialogInterface, i) -> {
 
-                }
-            }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
+            }).setNegativeButton("Cancel", (dialogInterface, i) -> {
 
-                }
             });
             AlertDialog mDialog = builder.create();
             mDialog.show();
@@ -43,16 +37,10 @@ TextView mSort,mFormat,mDefault,mExport,mImport,mUndo,mBlock,mRestore;
             String[] sortName = getApplicationContext().getResources().getStringArray(R.array.format_values);
 
             builder.setTitle("Name format");
-            builder.setSingleChoiceItems(sortName, -1, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
+            builder.setSingleChoiceItems(sortName, -1, (dialogInterface, i) -> {
 
-                }
-            }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
+            }).setNegativeButton("Cancel", (dialogInterface, i) -> {
 
-                }
             });
             AlertDialog mDialog = builder.create();
             mDialog.show();
@@ -82,21 +70,12 @@ TextView mSort,mFormat,mDefault,mExport,mImport,mUndo,mBlock,mRestore;
             String[] sortName = getApplicationContext().getResources().getStringArray(R.array.import_values);
 
             builder.setTitle("Import contact from");
-            builder.setSingleChoiceItems(sortName, -1, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
+            builder.setSingleChoiceItems(sortName, -1, (dialogInterface, i) -> {
 
-                }
-            }).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
+            }).setPositiveButton("Ok", (dialogInterface, i) -> {
 
-                }
-            }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
+            }).setNegativeButton("Cancel", (dialogInterface, i) -> {
 
-                }
             });
             AlertDialog mDialog = builder.create();
             mDialog.show();

@@ -9,7 +9,8 @@
             android:id="@+id/nav_contact"
             android:icon="@drawable/ic_person_outline_black"
             android:title="Contact"
-            />
+            app:actionLayout="@layout/contact_total"
+            app:actionViewClass="android.widget.TextView" />
         <item
             android:id="@+id/nav_suggestion"
             android:icon="@drawable/google_contacts_logo"

@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.enyata.framework.mvvm.ui.add_contact.AddContactActivity">
 
-    <data>
-
-        <import type="android.view.View" />
-
-        <variable
-            name="viewModel"
-            type="com.enyata.framework.mvvm.ui.add_contact.AddContactViewModel" />
-
-    </data>
     <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
@@ -30,7 +20,7 @@
             >
 
             <ImageView
-                android:id="@+id/cancel"
+                android:id="@+id/new_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -42,7 +32,7 @@
                 android:id="@+id/text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/cancel"
+                android:layout_toRightOf="@id/new_cancel"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="30dp"
                android:text="Create contact"
@@ -50,7 +40,7 @@
                 />
 
             <TextView
-                android:id="@+id/textSave"
+                android:id="@+id/new_Save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                android:layout_alignParentRight="true"
@@ -129,7 +119,7 @@
         </LinearLayout>
 
         <com.mikhaellopez.circularimageview.CircularImageView
-            android:id="@+id/camera"
+            android:id="@+id/cameraCreate"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:layout_width="70dp"
@@ -139,7 +129,6 @@
             app:civ_shadow="false"
             app:civ_shadow_radius="10dp"
             />
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -177,7 +166,7 @@
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/firstTextView"
+                        android:id="@+id/new_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="First name"
@@ -210,7 +199,7 @@
                >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/surnameTextView"
+                    android:id="@+id/new_surname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Surname"
@@ -287,7 +276,7 @@
                   app:hintTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
                   <com.google.android.material.textfield.TextInputEditText
-                      android:id="@+id/phoneTextView"
+                      android:id="@+id/new_number"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:hint="Phone"
@@ -355,7 +344,7 @@
                     app:hintTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/emailTextView"
+                        android:id="@+id/new_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Email"
@@ -398,4 +387,3 @@
 
     </LinearLayout>
     </ScrollView>
-</layout>
