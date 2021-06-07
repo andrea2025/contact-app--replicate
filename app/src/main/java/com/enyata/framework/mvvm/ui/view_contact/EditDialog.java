@@ -6,7 +6,6 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -38,7 +37,6 @@ public class EditDialog extends DialogFragment implements View.OnClickListener, 
     String name, number, email,contactEmail;
     String editName, editNumber, editEmail;
     TextView mSave;
-    Cursor cursor;
 
 
     public static EditDialog newInstance() {
