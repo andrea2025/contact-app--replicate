@@ -40,14 +40,6 @@ public class ContactAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     }
 
-//    @NonNull
-//    @Override
-//    public ContactViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        View view = LayoutInflater.from(context).inflate(R.layout.contact_list, parent, false);
-//        return new ContactViewHolder(view);
-//
-//
-//    }
 
     @NonNull
     @Override
