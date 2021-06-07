@@ -263,6 +263,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainActivity
             if (name.contains(query) || number.contains(query)) {
                 filteredModelList.add(contact);
                 emptySearch.setVisibility(View.GONE);
+                //search visibility
             } else {
                 emptySearch.setText("No result found");
                 emptySearch.setVisibility(View.VISIBLE);
